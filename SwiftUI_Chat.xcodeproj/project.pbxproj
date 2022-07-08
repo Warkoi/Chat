@@ -11,8 +11,10 @@
 		23435A0D2877DE230092A8FA /* LexendDeca-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23435A0A2877DE230092A8FA /* LexendDeca-SemiBold.ttf */; };
 		23435A0E2877DE230092A8FA /* LexendDeca-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23435A0B2877DE230092A8FA /* LexendDeca-Bold.ttf */; };
 		23435A102877DF080092A8FA /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23435A0F2877DF080092A8FA /* Fonts.swift */; };
+		23435A152877E2460092A8FA /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23435A142877E2460092A8FA /* CustomTabBar.swift */; };
+		23435A172877E2560092A8FA /* CustomerTabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23435A162877E2560092A8FA /* CustomerTabBarButton.swift */; };
 		23A25A552877D78600B094DC /* SwiftUI_ChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A25A542877D78600B094DC /* SwiftUI_ChatApp.swift */; };
-		23A25A572877D78600B094DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A25A562877D78600B094DC /* ContentView.swift */; };
+		23A25A572877D78600B094DC /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A25A562877D78600B094DC /* RootView.swift */; };
 		23A25A592877D78700B094DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A25A582877D78700B094DC /* Assets.xcassets */; };
 		23A25A5C2877D78700B094DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A25A5B2877D78700B094DC /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -22,9 +24,11 @@
 		23435A0A2877DE230092A8FA /* LexendDeca-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-SemiBold.ttf"; sourceTree = "<group>"; };
 		23435A0B2877DE230092A8FA /* LexendDeca-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-Bold.ttf"; sourceTree = "<group>"; };
 		23435A0F2877DF080092A8FA /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		23435A142877E2460092A8FA /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		23435A162877E2560092A8FA /* CustomerTabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTabBarButton.swift; sourceTree = "<group>"; };
 		23A25A512877D78600B094DC /* SwiftUI_Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_Chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A25A542877D78600B094DC /* SwiftUI_ChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_ChatApp.swift; sourceTree = "<group>"; };
-		23A25A562877D78600B094DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		23A25A562877D78600B094DC /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		23A25A582877D78700B094DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23A25A5B2877D78700B094DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -43,7 +47,8 @@
 		23435A032877DC300092A8FA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				23A25A562877D78600B094DC /* ContentView.swift */,
+				23435A132877E22F0092A8FA /* Custom Tab Bar */,
+				23A25A562877D78600B094DC /* RootView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -85,6 +90,15 @@
 				23435A0A2877DE230092A8FA /* LexendDeca-SemiBold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		23435A132877E22F0092A8FA /* Custom Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				23435A142877E2460092A8FA /* CustomTabBar.swift */,
+				23435A162877E2560092A8FA /* CustomerTabBarButton.swift */,
+			);
+			path = "Custom Tab Bar";
 			sourceTree = "<group>";
 		};
 		23A25A482877D78600B094DC = {
@@ -200,7 +214,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23A25A572877D78600B094DC /* ContentView.swift in Sources */,
+				23435A152877E2460092A8FA /* CustomTabBar.swift in Sources */,
+				23A25A572877D78600B094DC /* RootView.swift in Sources */,
+				23435A172877E2560092A8FA /* CustomerTabBarButton.swift in Sources */,
 				23435A102877DF080092A8FA /* Fonts.swift in Sources */,
 				23A25A552877D78600B094DC /* SwiftUI_ChatApp.swift in Sources */,
 			);
