@@ -19,6 +19,7 @@
 		23435A2128789A500092A8FA /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 23435A2028789A500092A8FA /* FirebaseFirestoreSwift */; };
 		23435A2328789A500092A8FA /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 23435A2228789A500092A8FA /* FirebaseStorage */; };
 		23435A25287924D90092A8FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23435A24287924D90092A8FA /* AppDelegate.swift */; };
+		23435A2828792ADE0092A8FA /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23435A2728792ADE0092A8FA /* AuthViewModel.swift */; };
 		23A25A552877D78600B094DC /* SwiftUI_ChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A25A542877D78600B094DC /* SwiftUI_ChatApp.swift */; };
 		23A25A572877D78600B094DC /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A25A562877D78600B094DC /* RootView.swift */; };
 		23A25A592877D78700B094DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A25A582877D78700B094DC /* Assets.xcassets */; };
@@ -35,6 +36,8 @@
 		23435A182877E4090092A8FA /* SwiftUI-Chat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SwiftUI-Chat-Info.plist"; sourceTree = SOURCE_ROOT; };
 		23435A19287895700092A8FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		23435A24287924D90092A8FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		23435A262879286B0092A8FA /* SwiftUI_Chat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUI_Chat.entitlements; sourceTree = "<group>"; };
+		23435A2728792ADE0092A8FA /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		23A25A512877D78600B094DC /* SwiftUI_Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_Chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A25A542877D78600B094DC /* SwiftUI_ChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_ChatApp.swift; sourceTree = "<group>"; };
 		23A25A562877D78600B094DC /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -69,6 +72,7 @@
 		23435A042877DC370092A8FA /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				23435A2728792ADE0092A8FA /* AuthViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -133,6 +137,7 @@
 		23A25A532877D78600B094DC /* SwiftUI_Chat */ = {
 			isa = PBXGroup;
 			children = (
+				23435A262879286B0092A8FA /* SwiftUI_Chat.entitlements */,
 				23435A182877E4090092A8FA /* SwiftUI-Chat-Info.plist */,
 				23435A19287895700092A8FA /* GoogleService-Info.plist */,
 				23435A24287924D90092A8FA /* AppDelegate.swift */,
@@ -243,6 +248,7 @@
 				23435A25287924D90092A8FA /* AppDelegate.swift in Sources */,
 				23435A152877E2460092A8FA /* CustomTabBar.swift in Sources */,
 				23A25A572877D78600B094DC /* RootView.swift in Sources */,
+				23435A2828792ADE0092A8FA /* AuthViewModel.swift in Sources */,
 				23435A172877E2560092A8FA /* CustomerTabBarButton.swift in Sources */,
 				23435A102877DF080092A8FA /* Fonts.swift in Sources */,
 				23A25A552877D78600B094DC /* SwiftUI_ChatApp.swift in Sources */,
@@ -371,6 +377,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftUI_Chat/SwiftUI_Chat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI_Chat/Preview Content\"";
@@ -401,6 +408,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftUI_Chat/SwiftUI_Chat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI_Chat/Preview Content\"";

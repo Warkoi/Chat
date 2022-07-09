@@ -2,11 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.338308137256-3263iojpnm0eakaffo8eog19gg7uk15e</string>
+			</array>
+		</dict>
+	</array>
 	<key>UIAppFonts</key>
 	<array>
-		<string>LexendDeca-Bold</string>
-		<string>LexendDeca-Regular</string>
-		<string>LexendDeca-SemiBold</string>
+		<string></string>
 	</array>
 </dict>
 </plist>
