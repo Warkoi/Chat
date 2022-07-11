@@ -9,16 +9,29 @@ import SwiftUI
 
 struct RootView: View {
     
-    @State var selectedTab: Tabs = .contacts
     
+    @State var selectedTab: Tabs = .contacts
+    @State var isOnboarding = !AuthViewModel.isUserLoggedIn()
     
    
     var body: some View {
         
+        
+        
         VStack {
+            
+            Text("Hello World")
+                .padding()
+                .font(Font.chatHeading)
+            
             Spacer()
             
             CustomTabBar(selectedTab: $selectedTab)
+        }
+        .fullScreenCover(isPresented: $isOnboarding) {
+            // on dismiss
+        } content: {
+           OnboardingContainerView(isOnboarding: $isOnboarding)
         }
         
         

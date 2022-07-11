@@ -20,6 +20,14 @@
 		23435A2328789A500092A8FA /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 23435A2228789A500092A8FA /* FirebaseStorage */; };
 		23435A25287924D90092A8FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23435A24287924D90092A8FA /* AppDelegate.swift */; };
 		23435A2828792ADE0092A8FA /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23435A2728792ADE0092A8FA /* AuthViewModel.swift */; };
+		23435A2B287A76DA0092A8FA /* OnboardingContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23435A2A287A76DA0092A8FA /* OnboardingContainerView.swift */; };
+		23435A2D287A7BFD0092A8FA /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23435A2C287A7BFD0092A8FA /* WelcomeView.swift */; };
+		23435A2F287A7C0A0092A8FA /* PhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23435A2E287A7C0A0092A8FA /* PhoneNumberView.swift */; };
+		23435A31287A7C170092A8FA /* VerficationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23435A30287A7C170092A8FA /* VerficationView.swift */; };
+		23435A33287A7C320092A8FA /* SynchContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23435A32287A7C320092A8FA /* SynchContactsView.swift */; };
+		23435A35287A7C4B0092A8FA /* CreateProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23435A34287A7C4B0092A8FA /* CreateProfileView.swift */; };
+		23435A37287A85E90092A8FA /* OnboardingButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23435A36287A85E90092A8FA /* OnboardingButtonStyle.swift */; };
+		23435A39287BBD900092A8FA /* CreateProfileTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23435A38287BBD900092A8FA /* CreateProfileTextFieldStyle.swift */; };
 		23A25A552877D78600B094DC /* SwiftUI_ChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A25A542877D78600B094DC /* SwiftUI_ChatApp.swift */; };
 		23A25A572877D78600B094DC /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A25A562877D78600B094DC /* RootView.swift */; };
 		23A25A592877D78700B094DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A25A582877D78700B094DC /* Assets.xcassets */; };
@@ -38,6 +46,14 @@
 		23435A24287924D90092A8FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23435A262879286B0092A8FA /* SwiftUI_Chat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUI_Chat.entitlements; sourceTree = "<group>"; };
 		23435A2728792ADE0092A8FA /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		23435A2A287A76DA0092A8FA /* OnboardingContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerView.swift; sourceTree = "<group>"; };
+		23435A2C287A7BFD0092A8FA /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		23435A2E287A7C0A0092A8FA /* PhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberView.swift; sourceTree = "<group>"; };
+		23435A30287A7C170092A8FA /* VerficationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerficationView.swift; sourceTree = "<group>"; };
+		23435A32287A7C320092A8FA /* SynchContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchContactsView.swift; sourceTree = "<group>"; };
+		23435A34287A7C4B0092A8FA /* CreateProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileView.swift; sourceTree = "<group>"; };
+		23435A36287A85E90092A8FA /* OnboardingButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButtonStyle.swift; sourceTree = "<group>"; };
+		23435A38287BBD900092A8FA /* CreateProfileTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileTextFieldStyle.swift; sourceTree = "<group>"; };
 		23A25A512877D78600B094DC /* SwiftUI_Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_Chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A25A542877D78600B094DC /* SwiftUI_ChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_ChatApp.swift; sourceTree = "<group>"; };
 		23A25A562877D78600B094DC /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -63,6 +79,7 @@
 		23435A032877DC300092A8FA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				23435A29287A76980092A8FA /* Onboarding */,
 				23435A132877E22F0092A8FA /* Custom Tab Bar */,
 				23A25A562877D78600B094DC /* RootView.swift */,
 			);
@@ -88,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				23435A0F2877DF080092A8FA /* Fonts.swift */,
+				23435A36287A85E90092A8FA /* OnboardingButtonStyle.swift */,
+				23435A38287BBD900092A8FA /* CreateProfileTextFieldStyle.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -116,6 +135,19 @@
 				23435A162877E2560092A8FA /* CustomerTabBarButton.swift */,
 			);
 			path = "Custom Tab Bar";
+			sourceTree = "<group>";
+		};
+		23435A29287A76980092A8FA /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				23435A2A287A76DA0092A8FA /* OnboardingContainerView.swift */,
+				23435A2C287A7BFD0092A8FA /* WelcomeView.swift */,
+				23435A2E287A7C0A0092A8FA /* PhoneNumberView.swift */,
+				23435A30287A7C170092A8FA /* VerficationView.swift */,
+				23435A32287A7C320092A8FA /* SynchContactsView.swift */,
+				23435A34287A7C4B0092A8FA /* CreateProfileView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		23A25A482877D78600B094DC = {
@@ -246,10 +278,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				23435A25287924D90092A8FA /* AppDelegate.swift in Sources */,
+				23435A2B287A76DA0092A8FA /* OnboardingContainerView.swift in Sources */,
 				23435A152877E2460092A8FA /* CustomTabBar.swift in Sources */,
 				23A25A572877D78600B094DC /* RootView.swift in Sources */,
+				23435A37287A85E90092A8FA /* OnboardingButtonStyle.swift in Sources */,
+				23435A31287A7C170092A8FA /* VerficationView.swift in Sources */,
+				23435A2D287A7BFD0092A8FA /* WelcomeView.swift in Sources */,
 				23435A2828792ADE0092A8FA /* AuthViewModel.swift in Sources */,
+				23435A35287A7C4B0092A8FA /* CreateProfileView.swift in Sources */,
+				23435A2F287A7C0A0092A8FA /* PhoneNumberView.swift in Sources */,
 				23435A172877E2560092A8FA /* CustomerTabBarButton.swift in Sources */,
+				23435A33287A7C320092A8FA /* SynchContactsView.swift in Sources */,
+				23435A39287BBD900092A8FA /* CreateProfileTextFieldStyle.swift in Sources */,
 				23435A102877DF080092A8FA /* Fonts.swift in Sources */,
 				23A25A552877D78600B094DC /* SwiftUI_ChatApp.swift in Sources */,
 			);
