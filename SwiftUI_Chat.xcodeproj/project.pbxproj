@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		233E8D5B287BCC4700CA3BB9 /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233E8D5A287BCC4700CA3BB9 /* ContactsViewModel.swift */; };
 		23435A0C2877DE230092A8FA /* LexendDeca-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23435A092877DE230092A8FA /* LexendDeca-Regular.ttf */; };
 		23435A0D2877DE230092A8FA /* LexendDeca-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23435A0A2877DE230092A8FA /* LexendDeca-SemiBold.ttf */; };
 		23435A0E2877DE230092A8FA /* LexendDeca-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23435A0B2877DE230092A8FA /* LexendDeca-Bold.ttf */; };
@@ -32,9 +33,13 @@
 		23A25A572877D78600B094DC /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A25A562877D78600B094DC /* RootView.swift */; };
 		23A25A592877D78700B094DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A25A582877D78700B094DC /* Assets.xcassets */; };
 		23A25A5C2877D78700B094DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A25A5B2877D78700B094DC /* Preview Assets.xcassets */; };
+		23D513C1287D0D58000DB629 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D513C0287D0D58000DB629 /* User.swift */; };
+		23D513C3287D0EFA000DB629 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D513C2287D0EFA000DB629 /* DatabaseService.swift */; };
+		23D513C5287D15CE000DB629 /* TextHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D513C4287D15CE000DB629 /* TextHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		233E8D5A287BCC4700CA3BB9 /* ContactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
 		23435A092877DE230092A8FA /* LexendDeca-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-Regular.ttf"; sourceTree = "<group>"; };
 		23435A0A2877DE230092A8FA /* LexendDeca-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-SemiBold.ttf"; sourceTree = "<group>"; };
 		23435A0B2877DE230092A8FA /* LexendDeca-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-Bold.ttf"; sourceTree = "<group>"; };
@@ -59,6 +64,9 @@
 		23A25A562877D78600B094DC /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		23A25A582877D78700B094DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23A25A5B2877D78700B094DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		23D513C0287D0D58000DB629 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		23D513C2287D0EFA000DB629 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		23D513C4287D15CE000DB629 /* TextHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				23435A2728792ADE0092A8FA /* AuthViewModel.swift */,
+				233E8D5A287BCC4700CA3BB9 /* ContactsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -97,6 +106,7 @@
 		23435A052877DC410092A8FA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				23D513C0287D0D58000DB629 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -107,6 +117,7 @@
 				23435A0F2877DF080092A8FA /* Fonts.swift */,
 				23435A36287A85E90092A8FA /* OnboardingButtonStyle.swift */,
 				23435A38287BBD900092A8FA /* CreateProfileTextFieldStyle.swift */,
+				23D513C4287D15CE000DB629 /* TextHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -114,6 +125,7 @@
 		23435A072877DC560092A8FA /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				23D513C2287D0EFA000DB629 /* DatabaseService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -277,19 +289,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23D513C3287D0EFA000DB629 /* DatabaseService.swift in Sources */,
 				23435A25287924D90092A8FA /* AppDelegate.swift in Sources */,
 				23435A2B287A76DA0092A8FA /* OnboardingContainerView.swift in Sources */,
 				23435A152877E2460092A8FA /* CustomTabBar.swift in Sources */,
+				23D513C5287D15CE000DB629 /* TextHelper.swift in Sources */,
 				23A25A572877D78600B094DC /* RootView.swift in Sources */,
 				23435A37287A85E90092A8FA /* OnboardingButtonStyle.swift in Sources */,
 				23435A31287A7C170092A8FA /* VerficationView.swift in Sources */,
 				23435A2D287A7BFD0092A8FA /* WelcomeView.swift in Sources */,
+				23D513C1287D0D58000DB629 /* User.swift in Sources */,
 				23435A2828792ADE0092A8FA /* AuthViewModel.swift in Sources */,
 				23435A35287A7C4B0092A8FA /* CreateProfileView.swift in Sources */,
 				23435A2F287A7C0A0092A8FA /* PhoneNumberView.swift in Sources */,
 				23435A172877E2560092A8FA /* CustomerTabBarButton.swift in Sources */,
 				23435A33287A7C320092A8FA /* SynchContactsView.swift in Sources */,
 				23435A39287BBD900092A8FA /* CreateProfileTextFieldStyle.swift in Sources */,
+				233E8D5B287BCC4700CA3BB9 /* ContactsViewModel.swift in Sources */,
 				23435A102877DF080092A8FA /* Fonts.swift in Sources */,
 				23A25A552877D78600B094DC /* SwiftUI_ChatApp.swift in Sources */,
 			);
