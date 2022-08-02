@@ -18,17 +18,26 @@ struct RootView: View {
         
         
         
-        VStack {
+        ZStack {
             
-            Text("Hello World")
-                .padding()
-                .font(Font.chatHeading)
+            Color("backgroundcolor")
+                .ignoresSafeArea()
+            VStack {
+                
+                switch selectedTab {
+                case .chats:
+                    ChatsListView()
+                case .contacts:
+                   ContactsListView()
+                }
+                   
+                
+                Spacer()
+                
+                CustomTabBar(selectedTab: $selectedTab)
+            }
             
-            Spacer()
-            
-            CustomTabBar(selectedTab: $selectedTab)
-        }
-        .fullScreenCover(isPresented: $isOnboarding) {
+        }.fullScreenCover(isPresented: $isOnboarding) {
             // on dismiss
         } content: {
            OnboardingContainerView(isOnboarding: $isOnboarding)

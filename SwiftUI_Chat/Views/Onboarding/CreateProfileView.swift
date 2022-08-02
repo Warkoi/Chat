@@ -13,6 +13,13 @@ struct CreateProfileView: View {
     @State var firstName = ""
     @State var lastName = ""
     
+    @State var selectedImage: UIImage?
+    @State var isPickerShowing = false
+    
+    @State var isSourceDialogShowing = false
+    @State var source: UIImagePickerController.SourceType = .photoLibrary
+    
+    @State var isSaveButtonDisabled = false
     
     var body: some View {
     
@@ -31,15 +38,29 @@ struct CreateProfileView: View {
            // Profile image button
             Button{
                 //show action sheet
+               isSourceDialogShowing = true
+                
             }label: {
                 ZStack{
-                    Circle()
-                        .foregroundColor(Color.white)
+                    
+                    if selectedImage != nil {
+                        
+                        Image(uiImage: selectedImage!)
+                            .resizable()
+                            .scaledToFill()
+                            .clipShape(Circle())
+                        
+                    } else {
+                        Circle()
+                            .foregroundColor(Color.white)
+                        
+                        
+                        Image(systemName: "camera.fill")
+                            .tint(Color("icons-input"))
+                    }
                     Circle()
                         .stroke(Color("create-profile-border"), lineWidth: 2)
                     
-                    Image(systemName: "camera.fill")
-                        .tint(Color("icons-input"))
                 }
                 .frame(width:134, height: 134)
                 
@@ -58,17 +79,61 @@ struct CreateProfileView: View {
             Spacer()
             
             Button{
+                
+                // Prevent double tapping
+                isSaveButtonDisabled = true
                 //Next Step
-                currentStep = .contacts
+                
+                //Save the data
+                
+                DatabaseService().setUserProfile(firstName: firstName, lastName: lastName, image: selectedImage){ isSuccess in
+                    if isSuccess {
+                        currentStep = .contacts
+                       
+                    }
+                    else{
+                        
+                    }
+                    isSaveButtonDisabled = false
+                }
+                
+                
             } label: {
-                Text("Next")
+                Text( isSaveButtonDisabled ? "Uploading" : "Save")
+            }
+            .buttonStyle(OnboardingButtonStyle())
+            .disabled(isSaveButtonDisabled)
+        }
+        .padding(.horizontal)
+        .confirmationDialog("From where?", isPresented: $isSourceDialogShowing, actions: {
+            
+            Button{
+                // Set the source to photo library
+                // Show the image picker
+                self.source = .photoLibrary
+                isPickerShowing = true
+    
+            } label: {
+                Text("Photo Library")
+            }
+            
+            if UIImagePickerController.isSourceTypeAvailable(.camera){
+                Button{
+                    // Set the source to camera
+                    self.source = .camera
+                    isPickerShowing = true
+                }label: {
+                    Text("Take Photo")
+                }
             }
             
             
             
-            .buttonStyle(OnboardingButtonStyle())
+        })
+        .sheet(isPresented: $isPickerShowing) {
+            //Show Image Picker
+            ImagePicker(selectedImage: $selectedImage, isPickerShowing: $isPickerShowing, source: self.source)
         }
-        .padding(.horizontal)
     
     }
 }

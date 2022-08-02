@@ -8,6 +8,9 @@
 import Foundation
 import Contacts
 import Firebase
+import UIKit
+import FirebaseStorage
+import FirebaseFirestore
 
 class DatabaseService {
     
@@ -80,6 +83,90 @@ class DatabaseService {
         
         
         
+    }
+    
+    func setUserProfile(firstName: String, lastName: String, image: UIImage?, completion: @escaping(Bool) -> Void){
+        
+        // Ensure that the user is logged in
+        guard AuthViewModel.isUserLoggedIn() != false else {
+            // User is not logged in
+            return
+        }
+        
+        // Get user's phone number
+        let userPhone = TextHelper.sanitzePhoneNumber(AuthViewModel.getLoggedInUserPhone())
+        
+        //Get a reference to the Firestore
+        let db = Firestore.firestore()
+        
+        //Set the profile data
+        let doc = db.collection("users").document(AuthViewModel.getLoggedInuserID())
+        doc.setData(["firstName": firstName,
+                     "lastName": lastName,
+                     "phone": userPhone])
+        
+        //Check if an image is passed through
+        if let image = image {
+            //Upload the image data
+            
+            // Create storage reference
+            let storageRef = Storage.storage().reference()
+            
+            //Turn image into data
+            let imageData = image.jpegData(compressionQuality: 0.8)
+            
+            guard imageData != nil else {
+                return
+            }
+            
+            // Specify the file path and name
+            let path = "images/\(UUID().uuidString).jpg"
+            let fileRef = storageRef.child(path)
+            
+            let uploadTask = fileRef.putData(imageData!, metadata: nil) { meta, error in
+                
+                if error == nil && meta != nil{
+                    doc.setData(["photo": path], merge: true)
+                    if error == nil {
+                        // Success, notify caller
+                        completion(true)
+                    }
+                }
+                else {
+                    // Upload wasnt succesful, notify caller
+                    completion(false)
+                    
+                }
+            }
+        }
+        
+        
+        //Check if an image is passed through
+        
+        
+        
+    }
+    
+    func checkUserProfile(completion: @escaping (Bool) -> Void){
+        
+        // Check that the user is logged in
+        guard AuthViewModel.isUserLoggedIn() != false else {
+            return
+        }
+        // Create firebase ref
+        let db = Firestore.firestore()
+        
+        db.collection("users").document(AuthViewModel.getLoggedInuserID()).getDocument {
+            snapshot, error in
+            
+            if snapshot != nil && error == nil {
+                completion(snapshot!.exists)
+            }
+            else{
+                completion(false)
+            }
+            
+        }
     }
     
     

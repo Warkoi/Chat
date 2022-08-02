@@ -32,6 +32,7 @@ struct CustomTabBar: View {
             
             Button {
                 //New Chat
+                AuthViewModel.logout()
                 
             } label: {
                 

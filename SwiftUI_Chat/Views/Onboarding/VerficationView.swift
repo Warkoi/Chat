@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import Combine
 
 struct VerficationView: View {
     
     @Binding var currentStep: OnboardingStep
+    @Binding var isOnboarding: Bool
+    
     @State var verificationCode = ""
     
     var body: some View {
@@ -35,6 +38,10 @@ struct VerficationView: View {
                 HStack{
                     TextField("", text: $verificationCode)
                         .font(Font.bodyParagraph)
+                        .keyboardType(.numberPad)
+                        .onReceive(Just(verificationCode)) { _ in
+                            TextHelper.limitText(&verificationCode, 6)
+                        }
                     Spacer()
                     Button {
                         // Clear text field
@@ -52,8 +59,29 @@ struct VerficationView: View {
             .padding(.top, 34)
             Spacer()
             Button{
-                //Next Step
-                currentStep = .profile
+                
+                AuthViewModel.verifyCode(code: verificationCode) { error in
+                    
+                    if error == nil {
+                        
+                        // Check if this user has a profile
+                        DatabaseService().checkUserProfile { exists in
+                            if exists {
+                                // End onboarding
+                                isOnboarding = false
+                            }
+                            else{
+                                //Next Step
+                                                        currentStep = .profile
+                            }
+                        }
+//
+                    }
+                    else{
+//
+                    }
+                }
+                
             } label: {
                 Text("Next")
             }
@@ -68,6 +96,6 @@ struct VerficationView: View {
 
 struct VerficationView_Previews: PreviewProvider {
     static var previews: some View {
-        VerficationView(currentStep: .constant(.verfication))
+        VerficationView(currentStep: .constant(.verfication), isOnboarding: .constant(true))
     }
 }
