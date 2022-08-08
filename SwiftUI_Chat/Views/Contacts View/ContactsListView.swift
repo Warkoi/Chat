@@ -41,15 +41,23 @@ struct ContactsListView: View {
                 
             }
             .frame(height: 46)
+            .onChange(of: filterText) { _ in
+                // Filter the results
+                contactsViewModel.filteredContacts(filterBy:
+                                                    filterText.lowercased()
+                    .trimmingCharacters(in: .whitespacesAndNewlines))
+            }
             
-            if contactsViewModel.users.count > 0 {
+            if contactsViewModel.filteredUsers.count > 0 {
                 // List
-                List(contactsViewModel.users){ user in
+                List(contactsViewModel.filteredUsers){ user in
                     
-                    Text(user.FirstName ?? "Test User")
-                    
+                    ContactRow(user: user)
+                        .listRowBackground(Color.clear)
+                        .listRowSeparator(Visibility.hidden)
                 }
                 .listStyle(.plain)
+                .padding(.top, 12)
             }
             else {
                 Spacer()

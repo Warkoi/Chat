@@ -10,7 +10,12 @@ import Contacts
 
 class ContactsViewModel: ObservableObject{
     
-    @Published var users = [User]()
+    private var users = [User]()
+    
+    private var filteredText = ""
+    
+    @Published var filteredUsers = [User]()
+    
     
     private var localContacts = [CNContact]()
     
@@ -45,6 +50,9 @@ class ContactsViewModel: ObservableObject{
                         // Set the fetched users to the published users property
                         self.users = platformUsers
                         
+                        // Set the filtered list
+                        self.filteredContacts(filterBy: self.filteredText)
+                        
                     }
                     
                    
@@ -58,6 +66,29 @@ class ContactsViewModel: ObservableObject{
             }
         }
         
+        
+    }
+    
+    func filteredContacts(filterBy: String){
+        
+        // Store parameter into property
+        self.filteredText = filterBy
+        
+        // If filter is empty show all users
+        if filteredText == "" {
+            self.filteredUsers = users
+            return
+        }
+        
+        // Filter user list
+        self.filteredUsers = users.filter({ user in
+            
+            //Criteria for including User
+            user.FirstName?.lowercased().contains(filteredText) ?? false ||
+            user.LastName?.lowercased().contains(filteredText) ?? false ||
+            user.Phone?.lowercased().contains(filteredText) ?? false
+            
+        })
         
     }
     

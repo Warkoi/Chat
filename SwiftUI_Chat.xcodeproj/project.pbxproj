@@ -32,6 +32,7 @@
 		23435A39287BBD900092A8FA /* CreateProfileTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23435A38287BBD900092A8FA /* CreateProfileTextFieldStyle.swift */; };
 		236F05CB28938903003A5E14 /* ContactsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236F05CA28938903003A5E14 /* ContactsListView.swift */; };
 		236F05CD28938927003A5E14 /* ChatsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236F05CC28938927003A5E14 /* ChatsListView.swift */; };
+		236F05CF289B69E0003A5E14 /* ContactRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236F05CE289B69DF003A5E14 /* ContactRow.swift */; };
 		23A25A552877D78600B094DC /* SwiftUI_ChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A25A542877D78600B094DC /* SwiftUI_ChatApp.swift */; };
 		23A25A572877D78600B094DC /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A25A562877D78600B094DC /* RootView.swift */; };
 		23A25A592877D78700B094DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A25A582877D78700B094DC /* Assets.xcassets */; };
@@ -65,6 +66,7 @@
 		23435A38287BBD900092A8FA /* CreateProfileTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileTextFieldStyle.swift; sourceTree = "<group>"; };
 		236F05CA28938903003A5E14 /* ContactsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsListView.swift; sourceTree = "<group>"; };
 		236F05CC28938927003A5E14 /* ChatsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsListView.swift; sourceTree = "<group>"; };
+		236F05CE289B69DF003A5E14 /* ContactRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRow.swift; sourceTree = "<group>"; };
 		23A25A512877D78600B094DC /* SwiftUI_Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_Chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A25A542877D78600B094DC /* SwiftUI_ChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_ChatApp.swift; sourceTree = "<group>"; };
 		23A25A562877D78600B094DC /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				236F05CA28938903003A5E14 /* ContactsListView.swift */,
+				236F05CE289B69DF003A5E14 /* ContactRow.swift */,
 			);
 			path = "Contacts View";
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				23435A2F287A7C0A0092A8FA /* PhoneNumberView.swift in Sources */,
 				23435A172877E2560092A8FA /* CustomerTabBarButton.swift in Sources */,
 				23435A33287A7C320092A8FA /* SynchContactsView.swift in Sources */,
+				236F05CF289B69E0003A5E14 /* ContactRow.swift in Sources */,
 				23435A39287BBD900092A8FA /* CreateProfileTextFieldStyle.swift in Sources */,
 				236F05CB28938903003A5E14 /* ContactsListView.swift in Sources */,
 				233E8D5B287BCC4700CA3BB9 /* ContactsViewModel.swift in Sources */,

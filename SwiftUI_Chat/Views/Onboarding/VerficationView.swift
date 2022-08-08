@@ -72,7 +72,7 @@ struct VerficationView: View {
                             }
                             else{
                                 //Next Step
-                                                        currentStep = .profile
+                                currentStep = .profile
                             }
                         }
 //
