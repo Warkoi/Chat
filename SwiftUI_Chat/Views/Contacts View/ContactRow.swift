@@ -13,51 +13,11 @@ struct ContactRow: View {
     
     var body: some View {
         
-        // Create URL from user photo url
-        let photoURL = URL(string: user.Photo ?? "")
+        
         
         HStack(spacing: 24){
             // Profile Image
-            ZStack{
-                
-                //Check if user has a photo
-                if user.Photo == nil {
-                    Circle()
-                        .foregroundColor(.white)
-                    
-                    Text(user.FirstName?.prefix(1) ?? "")
-                        .bold()
-                }
-                else{
-                    // Profile image
-                    AsyncImage(url: photoURL) { phase in
-                        
-                        switch phase {
-                        case .empty: ProgressView()
-                        case .success(let image):
-                            image
-                                .resizable()
-                                .clipShape(Circle())
-                                .scaledToFill()
-                                .clipped()
-                        case .failure:
-                            Circle()
-                                .foregroundColor(.white)
-                            
-                            Text(user.FirstName?.prefix(1) ?? "")
-                                .bold()
-                            
-                        }
-                    }
-                    
-                    
-                    Circle()
-                        .stroke(Color("create-profile-border"), lineWidth: 2)
-                }
-                
-                
-            }
-            .frame(width: 44, height: 44)
+            ProfilePicView(user: user)
             
             VStack(alignment:.leading, spacing: 4){
                 //Name
