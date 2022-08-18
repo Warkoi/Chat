@@ -36,6 +36,9 @@
 		236F05D128A0BB95003A5E14 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236F05D028A0BB95003A5E14 /* ConversationView.swift */; };
 		236F05D428A0BFB6003A5E14 /* ProfilePicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236F05D328A0BFB6003A5E14 /* ProfilePicView.swift */; };
 		236F05D628A4AE1A003A5E14 /* RoundedCornerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236F05D528A4AE1A003A5E14 /* RoundedCornerExt.swift */; };
+		236F05D828A5FC58003A5E14 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236F05D728A5FC58003A5E14 /* Chat.swift */; };
+		236F05DA28A765AD003A5E14 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236F05D928A765AD003A5E14 /* ChatViewModel.swift */; };
+		236F05DC28ADE3FB003A5E14 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236F05DB28ADE3FB003A5E14 /* DateHelper.swift */; };
 		23A25A552877D78600B094DC /* SwiftUI_ChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A25A542877D78600B094DC /* SwiftUI_ChatApp.swift */; };
 		23A25A572877D78600B094DC /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A25A562877D78600B094DC /* RootView.swift */; };
 		23A25A592877D78700B094DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A25A582877D78700B094DC /* Assets.xcassets */; };
@@ -73,6 +76,9 @@
 		236F05D028A0BB95003A5E14 /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
 		236F05D328A0BFB6003A5E14 /* ProfilePicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicView.swift; sourceTree = "<group>"; };
 		236F05D528A4AE1A003A5E14 /* RoundedCornerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerExt.swift; sourceTree = "<group>"; };
+		236F05D728A5FC58003A5E14 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		236F05D928A765AD003A5E14 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		236F05DB28ADE3FB003A5E14 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		23A25A512877D78600B094DC /* SwiftUI_Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_Chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A25A542877D78600B094DC /* SwiftUI_ChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_ChatApp.swift; sourceTree = "<group>"; };
 		23A25A562877D78600B094DC /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -116,6 +122,7 @@
 			children = (
 				23435A2728792ADE0092A8FA /* AuthViewModel.swift */,
 				233E8D5A287BCC4700CA3BB9 /* ContactsViewModel.swift */,
+				236F05D928A765AD003A5E14 /* ChatViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -124,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				23D513C0287D0D58000DB629 /* User.swift */,
+				236F05D728A5FC58003A5E14 /* Chat.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -136,6 +144,7 @@
 				23435A38287BBD900092A8FA /* CreateProfileTextFieldStyle.swift */,
 				23D513C4287D15CE000DB629 /* TextHelper.swift */,
 				236F05D528A4AE1A003A5E14 /* RoundedCornerExt.swift */,
+				236F05DB28ADE3FB003A5E14 /* DateHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -337,6 +346,7 @@
 				23D513C3287D0EFA000DB629 /* DatabaseService.swift in Sources */,
 				23435A25287924D90092A8FA /* AppDelegate.swift in Sources */,
 				23435A2B287A76DA0092A8FA /* OnboardingContainerView.swift in Sources */,
+				236F05DC28ADE3FB003A5E14 /* DateHelper.swift in Sources */,
 				23435A152877E2460092A8FA /* CustomTabBar.swift in Sources */,
 				23D513C5287D15CE000DB629 /* TextHelper.swift in Sources */,
 				23A25A572877D78600B094DC /* RootView.swift in Sources */,
@@ -356,6 +366,8 @@
 				236F05CB28938903003A5E14 /* ContactsListView.swift in Sources */,
 				233E8D5B287BCC4700CA3BB9 /* ContactsViewModel.swift in Sources */,
 				2325BBCC287FC2BC0018955C /* ImagePicker.swift in Sources */,
+				236F05DA28A765AD003A5E14 /* ChatViewModel.swift in Sources */,
+				236F05D828A5FC58003A5E14 /* Chat.swift in Sources */,
 				23435A102877DF080092A8FA /* Fonts.swift in Sources */,
 				23A25A552877D78600B094DC /* SwiftUI_ChatApp.swift in Sources */,
 				236F05D428A0BFB6003A5E14 /* ProfilePicView.swift in Sources */,

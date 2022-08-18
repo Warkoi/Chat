@@ -31,7 +31,7 @@ struct CustomTabBarButton: View {
                     .scaledToFit()
                     .frame(width: 24, height: 24)
                 
-                Text("Contacts")
+                Text(buttonText)
                     .font(Font.tabBar)
             }.frame(width: geo.size.width, height: geo.size.height)
         }
